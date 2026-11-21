@@ -66,6 +66,9 @@ def market():
         # HTX may return contract size via contract info. Do not infer if absent.
         contract=next(x for x in contracts if isinstance(x,dict) and str(x.get('contract_code','')).upper()=='SPCX-USDT')
         out['contract_size']=finite(contract.get('contract_size'))
+        out['contract_metadata']={'contract_code':contract.get('contract_code'),'contract_size_raw':contract.get('contract_size'),'price_tick':contract.get('price_tick'),'contract_status':contract.get('contract_status'),'trade_partition':'HTX USDT-margined swap (public)'}
+        # Contract value is not automatically treated as a linear P/L multiplier.
+        # Users must check the specific HTX settlement formula and lot units.
     except Exception as e:
         out['message']=str(e)[:220]
     save('market.json',out)
@@ -90,7 +93,7 @@ def news():
     return out
 
 def analytics(m):
-    out={'source':'HTX completed candles; rule-based educational research','fetched_at':NOW,'status':'unavailable','frames':{},'consensus':{'label':'数据不足','reason':'无数据'},'backtest':{},'message':'不能据此直接交易'}
+    out={'source':'HTX completed candles; rule-based educational research','fetched_at':NOW,'status':'unavailable','analysis_version':'V4','frames':{},'consensus':{'label':'数据不足','reason':'无数据'},'backtest':{},'message':'不能据此直接交易'}
     if m.get('status')!='ok':
         out['message']='HTX 行情无效：不计算策略'
         save('analytics.json',out);return out
@@ -100,15 +103,15 @@ def analytics(m):
         try:
             response=get('https://api.hbdm.com/linear-swap-ex/market/history/kline',{'contract_code':'SPCX-USDT','period':param,'size':200})
             data=response.get('data',[]) if isinstance(response,dict) else []
-            clean=read_frame([{'time':x.get('id'),'close':x.get('close'),'high':x.get('high'),'low':x.get('low'),'vol':x.get('vol')} for x in data if isinstance(x,dict)],seconds,now)
+            clean=read_frame([{'time':x.get('id'),'close':x.get('close'),'high':x.get('high'),'low':x.get('low'),'open':x.get('open'),'vol':x.get('vol')} for x in data if isinstance(x,dict)],seconds,now)
             out['frames'][label]=evaluate(clean)
-            if label=='1h':out['backtest']=backtest(clean)
+            if label=='1h':out['backtest']=backtest(clean,fee_bps=10,slippage_bps=5,funding_bps_per_bar=0)
         except Exception as e:
             out['frames'][label]={'state':'error','reason':str(e)[:150]}
     for k in periods:out['frames'].setdefault(k,{'state':'error','reason':'接口无响应'})
     out['consensus']=combine(out['frames'])
     out['status']='ok' if all(x.get('state')=='ok' for x in out['frames'].values()) else 'partial'
-    out['message']='所有分析仅使用已收盘K线；非大模型、不预测收益；需确认接口K线周期与合约规格'
+    out['message']='V4：只用已收盘K线。回测在下一根开盘入场，含假设手续费和滑点；不含实际强平和精确资金费率。'
     save('analytics.json',out);return out
 
 if __name__=='__main__':
