@@ -1,0 +1,9 @@
+{
+  "status": "unavailable",
+  "source": "HTX completed candles; rule-based educational research",
+  "fetched_at": null,
+  "frames": {},
+  "consensus": {"label": "数据不足", "reason": "等待首次运行"},
+  "backtest": {"status": "insufficient", "message": "等待首次运行"},
+  "message": "尚未运行 V3 数据程序"
+}
