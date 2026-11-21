@@ -1,41 +1,41 @@
 {
   "source": "HTX completed candles; rule-based educational research",
-  "fetched_at": "2026-11-21T19:49:57Z",
+  "fetched_at": "2026-11-21T20:28:47Z",
   "status": "ok",
   "analysis_version": "V4",
   "frames": {
     "15m": {
       "state": "ok",
-      "label": "偏多观察",
-      "reason": "EMA10>EMA25、RSI 50-70且最近完整K线量比≥1.2",
-      "ema10": 130.8436,
-      "ema25": 130.7051,
-      "rsi14": 56.41,
-      "volume_ratio": 2.082,
+      "label": "观望",
+      "reason": "趋势、动量或放量条件不同时满足",
+      "ema10": 130.8556,
+      "ema25": 130.731,
+      "rsi14": 58.82,
+      "volume_ratio": 0.0,
       "count": 199,
-      "last_closed_at": "2026-11-21T19:30:00+00:00"
+      "last_closed_at": "2026-11-21T20:00:00+00:00"
     },
     "1h": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 130.5231,
-      "ema25": 130.7467,
-      "rsi14": 81.8,
-      "volume_ratio": 0.099,
+      "ema10": 130.588,
+      "ema25": 130.757,
+      "rsi14": 81.17,
+      "volume_ratio": 0.275,
       "count": 199,
-      "last_closed_at": "2026-11-21T18:00:00+00:00"
+      "last_closed_at": "2026-11-21T19:00:00+00:00"
     },
     "4h": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 131.9801,
-      "ema25": 135.5813,
-      "rsi14": 14.46,
-      "volume_ratio": 0.082,
+      "ema10": 131.7801,
+      "ema25": 135.2197,
+      "rsi14": 12.22,
+      "volume_ratio": 0.045,
       "count": 199,
-      "last_closed_at": "2026-11-21T12:00:00+00:00"
+      "last_closed_at": "2026-11-21T16:00:00+00:00"
     }
   },
   "consensus": {
@@ -45,9 +45,9 @@
   "backtest": {
     "status": "insufficient",
     "bars": 199,
-    "trades": 16,
-    "win_rate_pct": 37.5,
-    "total_return_pct": -0.94,
+    "trades": 15,
+    "win_rate_pct": 40.0,
+    "total_return_pct": -0.56,
     "max_drawdown_pct": 4.04,
     "fee_per_side_bps": 10,
     "slippage_per_side_bps": 5,
