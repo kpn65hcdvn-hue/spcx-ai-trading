@@ -1,9 +1,55 @@
 {
-  "status": "unavailable",
   "source": "HTX completed candles; rule-based educational research",
-  "fetched_at": null,
-  "frames": {},
-  "consensus": {"label": "数据不足", "reason": "等待首次运行"},
-  "backtest": {"status": "insufficient", "message": "等待首次运行"},
-  "message": "尚未运行 V3 数据程序"
+  "fetched_at": "2026-11-21T15:22:22Z",
+  "status": "ok",
+  "frames": {
+    "15m": {
+      "state": "ok",
+      "label": "观望",
+      "reason": "趋势、动量或放量条件不同时满足",
+      "ema10": 130.7176,
+      "ema25": 130.3423,
+      "rsi14": 70.89,
+      "volume_ratio": 0.226,
+      "count": 199,
+      "last_closed_at": "2026-11-21T15:00:00+00:00"
+    },
+    "1h": {
+      "state": "ok",
+      "label": "观望",
+      "reason": "趋势、动量或放量条件不同时满足",
+      "ema10": 130.185,
+      "ema25": 130.7299,
+      "rsi14": 59.74,
+      "volume_ratio": 0.228,
+      "count": 199,
+      "last_closed_at": "2026-11-21T14:00:00+00:00"
+    },
+    "4h": {
+      "state": "ok",
+      "label": "观望",
+      "reason": "趋势、动量或放量条件不同时满足",
+      "ema10": 132.2579,
+      "ema25": 135.9856,
+      "rsi14": 17.42,
+      "volume_ratio": 0.042,
+      "count": 199,
+      "last_closed_at": "2026-11-21T08:00:00+00:00"
+    }
+  },
+  "consensus": {
+    "label": "观望",
+    "reason": "三个周期的趋势/成交量条件未形成一致信号"
+  },
+  "backtest": {
+    "status": "insufficient",
+    "bars": 199,
+    "trades": 18,
+    "win_rate_pct": 44.44,
+    "total_return_pct": 0.44,
+    "max_drawdown_pct": 3.74,
+    "fee_per_side_bps": 10,
+    "message": "研究用近似回测；信号收盘后生成、按下一根收盘价格变化估算，忽略滑点、资金费率、强平和执行偏差。少于20笔不能推断策略有效。"
+  },
+  "message": "所有分析仅使用已收盘K线；非大模型、不预测收益；需确认接口K线周期与合约规格"
 }
