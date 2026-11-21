@@ -1,1 +1,148 @@
-{"source":"Spaceflight News API","fetched_at":null,"status":"unavailable","message":"尚未运行 GitHub Actions","articles":[]}
+{
+  "source": "Spaceflight News API / third-party aggregated headlines",
+  "fetched_at": "2026-11-21T14:57:57Z",
+  "status": "ok",
+  "message": "新闻是第三方聚合，未自动核实真实性或利好利空",
+  "articles": [
+    {
+      "title": "Incoming House chair threatens SpaceX funding over Ukraine controversy",
+      "url": "https://arstechnica.com/space/2026/11/incoming-house-chair-threatens-spacex-funding-over-ukraine-controversy/",
+      "source": "Arstechnica",
+      "published_at": "2026-11-20T22:16:51Z",
+      "summary": "\"Explain the changes that were made to the Starshield service in October 2026.\""
+    },
+    {
+      "title": "Following Ship 42’s catch, SpaceX looks to the future",
+      "url": "https://www.nasaspaceflight.com/2026/11/ship-42-catch-future/",
+      "source": "NASASpaceflight",
+      "published_at": "2026-11-20T19:49:06Z",
+      "summary": "On Nov. 14, 2026, SpaceX made spaceflight history as teams brought Ship 42 back from…\nThe post Following Ship 42’s catch, SpaceX looks to the future appeared first on NASASpaceFlight.com."
+    },
+    {
+      "title": "Live coverage: SpaceX to launch classified payload for the U.S. Space Force",
+      "url": "https://spaceflightnow.com/2026/11/19/live-coverage-spacex-to-launch-classified-payload-for-the-u-s-space-force-2/",
+      "source": "Spaceflight Now",
+      "published_at": "2026-11-19T23:51:47Z",
+      "summary": "The mission is the latest in the series of ‘R’ missions tasked by the U.S. Space Force. Liftoff from pad 4 East is scheduled for 8:32 p.m. PST (11:32 p.m. EST / 432 UTC)."
+    },
+    {
+      "title": "NASA Sets Coverage for Northrop Grumman CRS-25 Launch, Prelaunch",
+      "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-northrop-grumman-crs-25-launch-prelaunch/",
+      "source": "NASA",
+      "published_at": "2026-11-18T22:19:17Z",
+      "summary": "NASA, Northrop Grumman, and SpaceX are targeting no earlier than 10:47 a.m. EST, Sunday, Nov. 29, for the next launch delivering science investigations, supplies, and equipment to the International Space Station. The agency also will hold a prelaunch media teleconference on Monday, Nov. 23. Filled with approximately 11,000 pounds of cargo, the Northrop Grumman Cygnus […]"
+    },
+    {
+      "title": "NASA to Cover 35th SpaceX Resupply Mission Space Station Departure",
+      "url": "https://www.nasa.gov/news-release/nasa-to-cover-35th-spacex-resupply-mission-space-station-departure/",
+      "source": "NASA",
+      "published_at": "2026-11-17T19:16:22Z",
+      "summary": "NASA and its international partners are set to receive scientific research samples and hardware as a SpaceX Dragon spacecraft departs the International Space Station no earlier than Wednesday, Nov. 18, for its return to Earth. Pending weather conditions, the Dragon spacecraft will undock from the Harmony module’s space-facing port at 11:05 a.m. EST, following a […]"
+    },
+    {
+      "title": "UK MOD Defends Satcom Resilience Amid SpaceX Starshield Concerns",
+      "url": "https://europeanspaceflight.com/uk-mod-defends-satcom-resilience-amid-spacex-starshield-concerns/",
+      "source": "European Spaceflight",
+      "published_at": "2026-11-16T17:50:24Z",
+      "summary": "The UK government has defended the resilience of its satellite-based military communications, saying that while it uses SpaceX’s Starshield service, it does not depend on any single commercial provider for critical communications. The assurance comes amid concerns about reliance on SpaceX after it emerged that restrictions had been placed on Ukraine’s access to the company’s […]\nThe post UK MOD Defends Satcom Resilience Amid SpaceX Starshield Concerns appeared first on European Spaceflight."
+    },
+    {
+      "title": "With Starship catch, SpaceX still shows it can dazzle the world",
+      "url": "https://arstechnica.com/space/2026/11/with-starship-catch-spacex-still-shows-it-can-dazzle-the-world/",
+      "source": "Arstechnica",
+      "published_at": "2026-11-15T00:40:59Z",
+      "summary": "It felt like stepping into the future."
+    },
+    {
+      "title": "SpaceX Catches a Starship",
+      "url": "https://spacepolicyonline.com/news/spacex-catches-a-starship/",
+      "source": "SpacePolicyOnline.com",
+      "published_at": "2026-11-14T21:53:18Z",
+      "summary": "SpaceX’s 15th Starship Integrated Flight Test (IFT-15) returned to Earth today and was “caught” back at the launch tower after orbiting Earth 14 times. It’s a milestone achievement for the […]"
+    },
+    {
+      "title": "Starship IFT-15 is in Orbit — Will it be “Caught” When It Returns to Earth?",
+      "url": "https://spacepolicyonline.com/news/starship-ift-15-is-in-orbit-will-it-be-caught-when-it-returns-to-earth/",
+      "source": "SpacePolicyOnline.com",
+      "published_at": "2026-11-13T23:54:54Z",
+      "summary": "SpaceX launched the 15th Starship Integrated Flight Test (IFT-15) early this evening from Starbase, Texas. Plans to bring the first stage Booster back to the launch tower for a “catch” […]"
+    },
+    {
+      "title": "Starship Flight 15 to attempt first catch of both stages",
+      "url": "https://www.nasaspaceflight.com/2026/11/starship-flight-15-spacex-history/",
+      "source": "NASASpaceflight",
+      "published_at": "2026-11-13T04:24:28Z",
+      "summary": "After 14 full-stack flights, SpaceX is set to attempt something no one in spaceflight history…\r\nThe post Starship Flight 15 to attempt first catch of both stages appeared first on NASASpaceFlight.com."
+    },
+    {
+      "title": "SpaceX now fundamentally an \"infrastructure company,\" senior official says",
+      "url": "https://arstechnica.com/space/2026/11/spacex-now-fundamentally-an-infrastructure-company-senior-official-says/",
+      "source": "Arstechnica",
+      "published_at": "2026-11-09T15:39:21Z",
+      "summary": "\"Grok analyzing the same video is 99.9 percent perfect.\""
+    },
+    {
+      "title": "Falcon 9 to launch from California on classified mission for U.S. Space Force",
+      "url": "https://spaceflightnow.com/2026/11/06/falcon-9-to-launch-from-california-on-classified-mission-for-u-s-space-force/",
+      "source": "Spaceflight Now",
+      "published_at": "2026-11-06T22:00:39Z",
+      "summary": "Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 4:48 p.m. PST (7:48 p.m. EST / 0048 UTC). The mission is thought to be carrying satellites based on SpaceX’s Starshield platform."
+    },
+    {
+      "title": "Elon Musk moved SpaceX to red Texas. Now it's blue. What happens next?",
+      "url": "https://arstechnica.com/space/2026/11/elon-musk-moved-spacex-to-red-texas-now-its-blue-what-happens-next/",
+      "source": "Arstechnica",
+      "published_at": "2026-11-04T20:36:05Z",
+      "summary": "\"Data centers in space looking pretty appealing right now.\""
+    },
+    {
+      "title": "NASA Invites Media to Northrop Grumman CRS-25 Station Resupply Launch",
+      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-northrop-grumman-crs-25-station-resupply-launch/",
+      "source": "NASA",
+      "published_at": "2026-11-02T17:33:22Z",
+      "summary": "Media accreditation is open for the next launch to deliver NASA science investigations, supplies, and equipment to the International Space Station. A Northrop Grumman Cygnus XL spacecraft will launch in November to the orbital laboratory on a SpaceX Falcon 9 rocket for NASA. The mission is known as NASA’s Northrop Grumman Commercial Resupply Services 25, […]"
+    },
+    {
+      "title": "Live coverage: SpaceX to close out October with Halloween eve Falcon 9 launch",
+      "url": "https://spaceflightnow.com/2026/10/30/live-coverage-spacex-to-close-out-october-with-halloween-eve-falcon-9-launch/",
+      "source": "Spaceflight Now",
+      "published_at": "2026-10-30T22:46:02Z",
+      "summary": "The Starlink 15-18 mission will add another 27 Starlink V2 Mini Optimized satellites to SpaceX’s megaconstellation. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 9:02 p.m. PDT (12:02 a.m. EDT / 0402 UTC)."
+    },
+    {
+      "title": "SpaceX Completes Three Static Fires in Three Days for Flight 15",
+      "url": "https://www.nasaspaceflight.com/2026/10/spacex-static-fires-flight-15/",
+      "source": "NASASpaceflight",
+      "published_at": "2026-10-30T21:53:38Z",
+      "summary": "In eight days, SpaceX completed all engine testing for Flight 15, some cryo-proof and catch…\r\nThe post SpaceX Completes Three Static Fires in Three Days for Flight 15 appeared first on NASASpaceFlight.com."
+    },
+    {
+      "title": "Advice for optimizing the space industry with Laura Crabtree",
+      "url": "https://spacenews.com/advice-for-optimizing-the-space-industry-with-laura-crabtree/",
+      "source": "SpaceNews",
+      "published_at": "2026-10-29T15:01:09Z",
+      "summary": "\nIn this episode, Mike Gruss speaks with Laura Crabtree, the CEO of Epsilon3, who is also a former SpaceX astronaut trainer. They talk about ways that space companies can organize […]\nThe post Advice for optimizing the space industry with Laura Crabtree appeared first on SpaceNews."
+    },
+    {
+      "title": "SpaceX no longer needs NASA, and that's a problem for America's space agency",
+      "url": "https://arstechnica.com/space/2026/10/spacex-no-longer-needs-nasa-and-thats-a-problem-for-americas-space-agency/",
+      "source": "Arstechnica",
+      "published_at": "2026-10-29T11:00:08Z",
+      "summary": "\"NASA desperately needs SpaceX, and SpaceX knows it, and Elon knows it.\""
+    },
+    {
+      "title": "Flexell Space and Satoro Agree to Collaborate on In-Orbit Demonstration of Next-Generation Space Solar Cells",
+      "url": "https://spacenews.com/flexell-space-and-satoro-agree-to-collaborate-on-in-orbit-demonstration-of-next-generation-space-solar-cells/",
+      "source": "SpaceNews",
+      "published_at": "2026-10-28T14:43:08Z",
+      "summary": "\n– Two demonstration missions planned aboard SpaceX Falcon 9, one each in 2027 and 2028 – Satoro to provide “Satellite-as-a-service” solution; Flexell Space to supply solar cells and test modules […]\nThe post Flexell Space and Satoro Agree to Collaborate on In-Orbit Demonstration of Next-Generation Space Solar Cells appeared first on SpaceNews."
+    },
+    {
+      "title": "Launch Preview: Falcon 9 and GSLV rockets scheduled to launch",
+      "url": "https://www.nasaspaceflight.com/2026/10/launch-preview-102626/",
+      "source": "NASASpaceflight",
+      "published_at": "2026-10-26T21:11:56Z",
+      "summary": "Four rockets are set to launch this week from the United States and India. SpaceX…\r\nThe post Launch Preview: Falcon 9 and GSLV rockets scheduled to launch appeared first on NASASpaceFlight.com."
+    }
+  ]
+}
