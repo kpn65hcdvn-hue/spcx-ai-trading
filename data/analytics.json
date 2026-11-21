@@ -1,18 +1,19 @@
 {
   "source": "HTX completed candles; rule-based educational research",
-  "fetched_at": "2026-11-21T15:22:22Z",
+  "fetched_at": "2026-11-21T15:42:57Z",
   "status": "ok",
+  "analysis_version": "V4",
   "frames": {
     "15m": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 130.7176,
-      "ema25": 130.3423,
-      "rsi14": 70.89,
-      "volume_ratio": 0.226,
+      "ema10": 130.7108,
+      "ema25": 130.3682,
+      "rsi14": 63.64,
+      "volume_ratio": 0.893,
       "count": 199,
-      "last_closed_at": "2026-11-21T15:00:00+00:00"
+      "last_closed_at": "2026-11-21T15:15:00+00:00"
     },
     "1h": {
       "state": "ok",
@@ -45,11 +46,14 @@
     "status": "insufficient",
     "bars": 199,
     "trades": 18,
-    "win_rate_pct": 44.44,
-    "total_return_pct": 0.44,
-    "max_drawdown_pct": 3.74,
+    "win_rate_pct": 38.89,
+    "total_return_pct": -1.59,
+    "max_drawdown_pct": 4.78,
     "fee_per_side_bps": 10,
-    "message": "研究用近似回测；信号收盘后生成、按下一根收盘价格变化估算，忽略滑点、资金费率、强平和执行偏差。少于20笔不能推断策略有效。"
+    "slippage_per_side_bps": 5,
+    "funding_sensitivity_bps_per_trade": 0,
+    "model": "信号K线收盘判定，下一根开盘入场、同根收盘退出；每个信号独立持有一根",
+    "message": "仅探索性回测。成本为假设值，不代表 HTX 实际费率；未模拟滑点尾部风险、强平、最小订单和资金费率结算时点。少于30笔或历史不足不可据此交易。"
   },
-  "message": "所有分析仅使用已收盘K线；非大模型、不预测收益；需确认接口K线周期与合约规格"
+  "message": "V4：只用已收盘K线。回测在下一根开盘入场，含假设手续费和滑点；不含实际强平和精确资金费率。"
 }
