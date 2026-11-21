@@ -25,10 +25,10 @@ def read_frame(rows, period_secs, now_seconds):
     for x in rows:
         try:
             ts=int(x['time']); close=float(x['close']); vol=float(x['vol'])
-            high=float(x['high']);low=float(x['low'])
-            if not all(math.isfinite(z) for z in (close,vol,high,low)) or close<=0 or vol<0 or high<low:continue
+            high=float(x['high']);low=float(x['low']);opening=float(x['open'])
+            if not all(math.isfinite(z) for z in (close,opening,vol,high,low)) or close<=0 or opening<=0 or vol<0 or high<low or not(low<=opening<=high and low<=close<=high):continue
             if ts+period_secs>now_seconds:continue
-            clean.append({'time':ts,'close':close,'vol':vol,'high':high,'low':low})
+            clean.append({'time':ts,'close':close,'open':opening,'vol':vol,'high':high,'low':low})
         except (KeyError,TypeError,ValueError,OverflowError):continue
     return sorted({x['time']:x for x in clean}.values(),key=lambda x:x['time'])
 
@@ -46,22 +46,34 @@ def evaluate(rows):
         label='偏空观察';reason='EMA10<EMA25、RSI 30-50且最近完整K线量比≥1.2'
     return {'state':'ok','label':label,'reason':reason,'ema10':round(a,4),'ema25':round(b,4),'rsi14':round(r,2),'volume_ratio':round(vr,3) if vr is not None else None,'count':len(rows),'last_closed_at':dt.datetime.fromtimestamp(rows[-1]['time'],dt.timezone.utc).isoformat()}
 
-def backtest(rows,fee_bps=10):
-    """Simplified nonleveraged close-to-next-close, no future leakage.
-    Signal evaluated at bar i close; return from i close to i+1 close; no intrabar fills.
-    Conservative only as research: excludes funding, slippage and liquidation.
+def backtest(rows, fee_bps=10.0, slippage_bps=5.0, funding_bps_per_bar=0.0):
+    """Exploratory one-bar study: signal at bar i close, next bar open entry,
+    next bar close exit. Chronological, no lookahead in signals.
+    Both sides fees/slippage are modeled, plus funding sensitivity per bar.
+    No actual fills, leverage, margin, liquidation, or path-dependent stops.
     """
-    if len(rows)<70:return {'status':'insufficient','message':'完整K线少于70根，无法形成有意义的样本','bars':len(rows)}
-    # whole-bar returns approximate after-closed-bar execution; signal known at bar close
-    equity=1.0;peak=1.0;maxdd=0; trades=0;wins=0;sum_ret=0.;fee=fee_bps/10000
+    if len(rows)<70:
+        return {'status':'insufficient','message':'完整K线不足70根','bars':len(rows),'trades':0}
+    for v in (fee_bps,slippage_bps,funding_bps_per_bar):
+        if not math.isfinite(v) or v<0: raise ValueError('测试成本必须为非负有限数')
+    eq=1.;peak=1.;dd=0.;trades=0;wins=0;net_returns=[]
+    cost=(2*fee_bps+2*slippage_bps+funding_bps_per_bar)/10000
     for i in range(35,len(rows)-1):
-        s=evaluate(rows[:i+1]);d=1 if s.get('label')=='偏多观察' else -1 if s.get('label')=='偏空观察' else 0
-        if not d:continue
-        gross=d*(rows[i+1]['close']/rows[i]['close']-1)
-        net=gross-2*fee
-        equity*=max(0.001,1+net);peak=max(peak,equity);maxdd=max(maxdd,(peak-equity)/peak)
-        trades+=1;wins+=int(net>0);sum_ret+=net
-    return {'status':'ok' if trades>=20 else 'insufficient','bars':len(rows),'trades':trades,'win_rate_pct':round(100*wins/trades,2) if trades else None,'total_return_pct':round(100*(equity-1),2),'max_drawdown_pct':round(100*maxdd,2),'fee_per_side_bps':fee_bps,'message':'研究用近似回测；信号收盘后生成、按下一根收盘价格变化估算，忽略滑点、资金费率、强平和执行偏差。少于20笔不能推断策略有效。'}
+        sig=evaluate(rows[:i+1]);side=1 if sig.get('label')=='偏多观察' else -1 if sig.get('label')=='偏空观察' else 0
+        if not side: continue
+        nxt=rows[i+1]
+        gross=side*(nxt['close']/nxt['open']-1)
+        net=gross-cost
+        eq*=max(0.000001,1+net)
+        peak=max(peak,eq);dd=max(dd,(peak-eq)/peak)
+        net_returns.append(net);trades+=1;wins+=int(net>0)
+    return {'status':'insufficient' if trades<30 else 'exploratory', 'bars':len(rows),'trades':trades,
+            'win_rate_pct':round(100*wins/trades,2) if trades else None,
+            'total_return_pct':round(100*(eq-1),2),'max_drawdown_pct':round(dd*100,2),
+            'fee_per_side_bps':fee_bps,'slippage_per_side_bps':slippage_bps,
+            'funding_sensitivity_bps_per_trade':funding_bps_per_bar,
+            'model':'信号K线收盘判定，下一根开盘入场、同根收盘退出；每个信号独立持有一根',
+            'message':'仅探索性回测。成本为假设值，不代表 HTX 实际费率；未模拟滑点尾部风险、强平、最小订单和资金费率结算时点。少于30笔或历史不足不可据此交易。'}
 
 def combine(frames):
     labels=[frames[k].get('label') for k in ('15m','1h','4h')]
