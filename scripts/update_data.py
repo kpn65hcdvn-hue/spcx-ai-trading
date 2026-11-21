@@ -4,6 +4,8 @@ import datetime as dt
 import json
 import math
 import os
+import time
+from strategy import read_frame,evaluate,backtest,combine
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -87,7 +89,30 @@ def news():
     save('news.json',out)
     return out
 
+def analytics(m):
+    out={'source':'HTX completed candles; rule-based educational research','fetched_at':NOW,'status':'unavailable','frames':{},'consensus':{'label':'数据不足','reason':'无数据'},'backtest':{},'message':'不能据此直接交易'}
+    if m.get('status')!='ok':
+        out['message']='HTX 行情无效：不计算策略'
+        save('analytics.json',out);return out
+    now=int(time.time())
+    periods={'15m':('15min',900),'1h':('60min',3600),'4h':('4hour',14400)}
+    for label,(param,seconds) in periods.items():
+        try:
+            response=get('https://api.hbdm.com/linear-swap-ex/market/history/kline',{'contract_code':'SPCX-USDT','period':param,'size':200})
+            data=response.get('data',[]) if isinstance(response,dict) else []
+            clean=read_frame([{'time':x.get('id'),'close':x.get('close'),'high':x.get('high'),'low':x.get('low'),'vol':x.get('vol')} for x in data if isinstance(x,dict)],seconds,now)
+            out['frames'][label]=evaluate(clean)
+            if label=='1h':out['backtest']=backtest(clean)
+        except Exception as e:
+            out['frames'][label]={'state':'error','reason':str(e)[:150]}
+    for k in periods:out['frames'].setdefault(k,{'state':'error','reason':'接口无响应'})
+    out['consensus']=combine(out['frames'])
+    out['status']='ok' if all(x.get('state')=='ok' for x in out['frames'].values()) else 'partial'
+    out['message']='所有分析仅使用已收盘K线；非大模型、不预测收益；需确认接口K线周期与合约规格'
+    save('analytics.json',out);return out
+
 if __name__=='__main__':
-    m=market();n=news()
+    m=market();n=news();a=analytics(m)
     print('market:',m['status'],m['message'])
     print('news:',n['status'],len(n['articles']),n['message'])
+    print('analytics:',a['status'],a['consensus']['label'])
