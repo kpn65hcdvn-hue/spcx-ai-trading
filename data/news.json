@@ -1,6 +1,6 @@
 {
   "source": "Spaceflight News API / third-party aggregated headlines",
-  "fetched_at": "2026-11-23T06:08:42Z",
+  "fetched_at": "2026-11-23T07:59:08Z",
   "status": "ok",
   "message": "新闻是第三方聚合，未自动核实真实性或利好利空",
   "articles": [
@@ -9,7 +9,7 @@
       "url": "https://spaceflightnow.com/2026/11/21/live-coverage-spacex-to-launch-intelligence-gathering-satellites-for-the-national-reconnaissance-office-3/",
       "source": "Spaceflight Now",
       "published_at": "2026-11-21T16:50:51Z",
-      "summary": "The NROL-136 mission will be the fourth launch of the year supporting the agency’s proliferated architecture satellite constellation in low Earth orbit. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled during a window that opens at 4:16 a.m. PST (7:16 a.m. EST / 1216 UTC). "
+      "summary": "The NROL-136 mission will be the fourth launch of the year supporting the agency’s proliferated architecture satellite constellation in low Earth orbit. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled during a window that opens at 4:16 a.m. PST (7:16 a.m. EST / 1216 UTC)."
     },
     {
       "title": "Incoming House chair threatens SpaceX funding over Ukraine controversy",
@@ -23,7 +23,7 @@
       "url": "https://www.nasaspaceflight.com/2026/11/ship-42-catch-future/",
       "source": "NASASpaceflight",
       "published_at": "2026-11-20T19:49:06Z",
-      "summary": "On Nov. 14, 2026, SpaceX made spaceflight history as teams brought Ship 42 back from…\nThe post Following Ship 42’s catch, SpaceX looks to the future appeared first on NASASpaceFlight.com."
+      "summary": "On Nov. 14, 2026, SpaceX made spaceflight history as teams brought Ship 42 back from…\r\nThe post Following Ship 42’s catch, SpaceX looks to the future appeared first on NASASpaceFlight.com."
     },
     {
       "title": "Live coverage: SpaceX to launch classified payload for the U.S. Space Force",
