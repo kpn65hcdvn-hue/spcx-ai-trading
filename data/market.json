@@ -1,23 +1,15 @@
 {
   "source": "HTX public USDT-margined swaps",
   "symbol": "SPCX-USDT",
-  "fetched_at": "2026-11-23T11:39:22Z",
+  "fetched_at": "2026-11-23T12:50:38Z",
   "status": "ok",
   "message": "官方公开行情；非推送实时流，按后台定时更新",
-  "last_price": 131.81,
+  "last_price": 130.87,
   "open_24h": 130.51,
   "high_24h": 133.24,
   "low_24h": 130.3,
-  "volume_24h": 172604.0,
+  "volume_24h": 187322.0,
   "candles": [
-    {
-      "time": 1795075200,
-      "open": 146.58,
-      "high": 146.73,
-      "low": 146.42,
-      "close": 146.58,
-      "vol": 9728.0
-    },
     {
       "time": 1795078800,
       "open": 146.46,
@@ -805,10 +797,18 @@
     {
       "time": 1795431600,
       "open": 131.96,
-      "high": 132.04,
+      "high": 132.1,
       "low": 131.7,
-      "close": 131.81,
-      "vol": 4510.0
+      "close": 131.86,
+      "vol": 8672.0
+    },
+    {
+      "time": 1795435200,
+      "open": 131.92,
+      "high": 131.96,
+      "low": 130.8,
+      "close": 130.87,
+      "vol": 11364.0
     }
   ],
   "contract_size": 0.01,
