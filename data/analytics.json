@@ -1,6 +1,6 @@
 {
   "source": "HTX completed candles; rule-based educational research",
-  "fetched_at": "2026-11-27T16:09:58Z",
+  "fetched_at": "2026-11-27T17:26:51Z",
   "status": "ok",
   "analysis_version": "V4",
   "frames": {
@@ -8,23 +8,23 @@
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 131.3095,
-      "ema25": 131.6415,
-      "rsi14": 52.0,
-      "volume_ratio": 0.032,
+      "ema10": 131.4956,
+      "ema25": 131.6124,
+      "rsi14": 55.26,
+      "volume_ratio": 0.058,
       "count": 199,
-      "last_closed_at": "2026-11-27T15:45:00+00:00"
+      "last_closed_at": "2026-11-27T17:00:00+00:00"
     },
     "1h": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 131.6987,
-      "ema25": 131.1237,
-      "rsi14": 51.44,
-      "volume_ratio": 0.343,
+      "ema10": 131.6934,
+      "ema25": 131.1657,
+      "rsi14": 47.34,
+      "volume_ratio": 0.397,
       "count": 199,
-      "last_closed_at": "2026-11-27T15:00:00+00:00"
+      "last_closed_at": "2026-11-27T16:00:00+00:00"
     },
     "4h": {
       "state": "ok",
