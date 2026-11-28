@@ -1,9 +1,16 @@
 {
   "source": "Spaceflight News API / third-party aggregated headlines",
-  "fetched_at": "2026-11-28T13:43:02Z",
+  "fetched_at": "2026-11-28T14:32:37Z",
   "status": "ok",
   "message": "新闻是第三方聚合，未自动核实真实性或利好利空",
   "articles": [
+    {
+      "title": "Live coverage: SpaceX to launch satellites for U.S. Space Force’s data network",
+      "url": "https://spaceflightnow.com/2026/11/28/live-coverage-spacex-to-launch-satellites-for-u-s-space-forces-data-network/",
+      "source": "Spaceflight Now",
+      "published_at": "2026-11-28T14:05:09Z",
+      "summary": "The USSF-380 mission will be the seventh flight supporting this satellite constellation for the U. Space Force. Liftoff of the Falcon 9 rocket from Vandenberg Space Force Base is scheduled during a window that opens at 8:39 p.m. PST / 11:39 p.m. EST on Nov. 28 (0439 UTC on Nov. 29). "
+    },
     {
       "title": "FCC authorizes SpaceX to deploy up to 1 million Starmind AI satellites by 2040",
       "url": "https://www.nasaspaceflight.com/2026/11/fcc-authorizes-spacex-1-million-starmind-2040/",
@@ -136,13 +143,6 @@
       "source": "Arstechnica",
       "published_at": "2026-11-04T20:36:05Z",
       "summary": "\"Data centers in space looking pretty appealing right now.\""
-    },
-    {
-      "title": "NASA Invites Media to Northrop Grumman CRS-25 Station Resupply Launch",
-      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-northrop-grumman-crs-25-station-resupply-launch/",
-      "source": "NASA",
-      "published_at": "2026-11-02T17:33:22Z",
-      "summary": "Media accreditation is open for the next launch to deliver NASA science investigations, supplies, and equipment to the International Space Station. A Northrop Grumman Cygnus XL spacecraft will launch in November to the orbital laboratory on a SpaceX Falcon 9 rocket for NASA. The mission is known as NASA’s Northrop Grumman Commercial Resupply Services 25, […]"
     }
   ]
 }
