@@ -1,41 +1,41 @@
 {
   "source": "HTX completed candles; rule-based educational research",
-  "fetched_at": "2026-11-28T15:24:44Z",
+  "fetched_at": "2026-11-28T16:27:17Z",
   "status": "ok",
   "analysis_version": "V4",
   "frames": {
     "15m": {
       "state": "ok",
-      "label": "偏多观察",
-      "reason": "EMA10>EMA25、RSI 50-70且最近完整K线量比≥1.2",
-      "ema10": 132.1311,
-      "ema25": 132.1059,
-      "rsi14": 53.91,
-      "volume_ratio": 1.248,
+      "label": "观望",
+      "reason": "趋势、动量或放量条件不同时满足",
+      "ema10": 132.1755,
+      "ema25": 132.1329,
+      "rsi14": 50.4,
+      "volume_ratio": 0.314,
       "count": 199,
-      "last_closed_at": "2026-11-28T15:00:00+00:00"
+      "last_closed_at": "2026-11-28T16:00:00+00:00"
     },
     "1h": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 132.1178,
-      "ema25": 131.9936,
-      "rsi14": 59.35,
-      "volume_ratio": 0.259,
+      "ema10": 132.1491,
+      "ema25": 132.0164,
+      "rsi14": 58.57,
+      "volume_ratio": 0.361,
       "count": 199,
-      "last_closed_at": "2026-11-28T14:00:00+00:00"
+      "last_closed_at": "2026-11-28T15:00:00+00:00"
     },
     "4h": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 131.5797,
-      "ema25": 130.6654,
-      "rsi14": 67.39,
-      "volume_ratio": 0.056,
+      "ema10": 131.7088,
+      "ema25": 130.7903,
+      "rsi14": 72.87,
+      "volume_ratio": 0.086,
       "count": 199,
-      "last_closed_at": "2026-11-28T08:00:00+00:00"
+      "last_closed_at": "2026-11-28T12:00:00+00:00"
     }
   },
   "consensus": {
@@ -45,10 +45,10 @@
   "backtest": {
     "status": "insufficient",
     "bars": 199,
-    "trades": 20,
-    "win_rate_pct": 10.0,
-    "total_return_pct": -9.42,
-    "max_drawdown_pct": 9.42,
+    "trades": 19,
+    "win_rate_pct": 10.53,
+    "total_return_pct": -9.13,
+    "max_drawdown_pct": 9.13,
     "fee_per_side_bps": 10,
     "slippage_per_side_bps": 5,
     "funding_sensitivity_bps_per_trade": 0,
