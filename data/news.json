@@ -1,9 +1,16 @@
 {
   "source": "Spaceflight News API / third-party aggregated headlines",
-  "fetched_at": "2026-11-28T19:25:52Z",
+  "fetched_at": "2026-11-28T20:26:10Z",
   "status": "ok",
   "message": "新闻是第三方聚合，未自动核实真实性或利好利空",
   "articles": [
+    {
+      "title": "Live coverage: NASA, SpaceX to launch Northrop Grumman Cygnus spacecraft to the International Space Station",
+      "url": "https://spaceflightnow.com/2026/11/28/live-coverage-nasa-spacex-to-launch-northrop-grumman-cygnus-spacecraft-to-the-international-space-station/",
+      "source": "Spaceflight Now",
+      "published_at": "2026-11-28T19:17:04Z",
+      "summary": "The NG-25 mission is the 25th flight of a Cygnus spacecraft to the space station as part of NASA’s Commercial Resupply Services contract. Liftoff from pad 40 at Cape Canaveral Space Force Station is scheduled for Sunday, Nov. 29, at 10:47 a.m. EST (1547 UTC). "
+    },
     {
       "title": "Live coverage: SpaceX to launch satellites for U.S. Space Force’s data network",
       "url": "https://spaceflightnow.com/2026/11/28/live-coverage-spacex-to-launch-satellites-for-u-s-space-forces-data-network/",
@@ -136,13 +143,6 @@
       "source": "Spaceflight Now",
       "published_at": "2026-11-06T22:00:39Z",
       "summary": "Liftoff from pad 4E at Vandenberg Space Force Base is scheduled for 4:48 p.m. PST (7:48 p.m. EST / 0048 UTC). The mission is thought to be carrying satellites based on SpaceX’s Starshield platform."
-    },
-    {
-      "title": "Elon Musk moved SpaceX to red Texas. Now it's blue. What happens next?",
-      "url": "https://arstechnica.com/space/2026/11/elon-musk-moved-spacex-to-red-texas-now-its-blue-what-happens-next/",
-      "source": "Arstechnica",
-      "published_at": "2026-11-04T20:36:05Z",
-      "summary": "\"Data centers in space looking pretty appealing right now.\""
     }
   ]
 }
