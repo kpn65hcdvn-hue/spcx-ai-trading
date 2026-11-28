@@ -1,6 +1,6 @@
 {
   "source": "HTX completed candles; rule-based educational research",
-  "fetched_at": "2026-11-28T03:59:06Z",
+  "fetched_at": "2026-11-28T05:04:04Z",
   "status": "ok",
   "analysis_version": "V4",
   "frames": {
@@ -8,34 +8,34 @@
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 132.2446,
-      "ema25": 132.2605,
-      "rsi14": 38.67,
-      "volume_ratio": 0.033,
+      "ema10": 132.2415,
+      "ema25": 132.2534,
+      "rsi14": 56.44,
+      "volume_ratio": 0.093,
       "count": 199,
-      "last_closed_at": "2026-11-28T03:30:00+00:00"
+      "last_closed_at": "2026-11-28T04:45:00+00:00"
     },
     "1h": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 132.2127,
-      "ema25": 131.8321,
-      "rsi14": 48.63,
-      "volume_ratio": 0.199,
+      "ema10": 132.2115,
+      "ema25": 131.8879,
+      "rsi14": 67.53,
+      "volume_ratio": 0.248,
       "count": 199,
-      "last_closed_at": "2026-11-28T02:00:00+00:00"
+      "last_closed_at": "2026-11-28T04:00:00+00:00"
     },
     "4h": {
       "state": "ok",
       "label": "观望",
       "reason": "趋势、动量或放量条件不同时满足",
-      "ema10": 131.0715,
-      "ema25": 130.2505,
-      "rsi14": 87.31,
-      "volume_ratio": 0.113,
+      "ema10": 131.2803,
+      "ema25": 130.402,
+      "rsi14": 72.89,
+      "volume_ratio": 0.29,
       "count": 199,
-      "last_closed_at": "2026-11-27T20:00:00+00:00"
+      "last_closed_at": "2026-11-28T00:00:00+00:00"
     }
   },
   "consensus": {
